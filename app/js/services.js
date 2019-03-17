@@ -3811,7 +3811,7 @@ angular.module('myApp.services', ['myApp.i18n', 'izhukov.utils'])
             } else {
               titleChanged = true
               document.title = langNotificationsPluralize(notificationsCount)
-              setFavicon('favicon_unread.ico')
+              setFavicon('favicon_unread.ico.png')
             }
           }, 1000)
         }
@@ -3966,7 +3966,7 @@ angular.module('myApp.services', ['myApp.i18n', 'izhukov.utils'])
     }
 
     function setFavicon (href) {
-      href = href || 'favicon.ico'
+      href = href || 'favicon.ico.png'
       if (prevFavicon === href) {
         return
       }

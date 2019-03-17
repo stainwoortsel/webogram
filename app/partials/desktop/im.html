@@ -4,6 +4,7 @@
 
   <div class="im_page_split clearfix">
 
+<!--
     <div class="im_dialogs_col_wrap noselect" ng-controller="AppImDialogsController" my-dialogs ng-class="search.query.length > 0 ? 'im_dialogs_col_search' : ''">
       <div class="im_dialogs_panel">
         <div class="im_dialogs_search">
@@ -31,7 +32,7 @@
 
                   <div class="im_dialog_meta pull-right">
                     <div class="im_dialog_clear_searchpeer">
-                      <!-- <i class="icon icon-clear-searchpeer"></i> -->
+                      &lt;!&ndash; <i class="icon icon-clear-searchpeer"></i> &ndash;&gt;
                       <i class="icon icon-search-clear"></i>
                     </div>
                   </div>
@@ -110,6 +111,7 @@
         </div>
       </div>
     </div>
+-->
 
     <div class="im_history_col_wrap noselect" ng-controller="AppImHistoryController" ng-class="{im_history_loaded: state.loaded}">
 
@@ -231,6 +233,62 @@
         </div>
       </div>
 
+    </div>
+
+    <div class="im_sidepanel_col_wrap noselect" ng-controller="AppImSidepanelController" ng-class="{im_sidepanel_loaded: state.loaded}">
+
+      <div class="im_sidepanel_selected_loading_wrap im_sidepanel_loading" my-vertical-position="0.4" padding="true">
+        <div my-arc-progress stroke="4" width="32"></div>
+      </div>
+
+      <div class="im_sidepanel_selected_wrap">
+        <div my-sidepanel class="im_sidepanel_col">
+
+          <div class="im_sidepanel_wrap nano" id="panel-process">
+            <div class="im_sidepanel_scrollable_wrap nano-content">
+              <div class="im_sidepanel_scrollable">
+                <div class="im_sidepanel">
+
+<!--
+                  <div class="im_sidepanel_empty_wrap" ng-show="state.empty" ng-switch="state.mayBeHasMore">
+                    <div ng-switch-when="true" class="im_history_loading" my-vertical-position="0.3" padding="true">
+                      <div my-arc-progress stroke="4" width="32"></div>
+                    </div>
+                    <div ng-switch-default class="im_sidepanel_empty" my-vertical-position="0.25" padding="true" my-i18n="im_no_messages"></div>
+                  </div>
+-->
+
+                  <div class="im_sidepanel_messages" ng-class="{im_sidepanel_messages_group: historyPeer.id < 0}"></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="im_sidepanel_wrap nano" id="panel-examples">
+            <div class="im_sidepanel_scrollable_wrap nano-content">
+              <div class="im_sidepanel_scrollable">
+                <div class="im_sidepanel">
+
+                  <!--
+                                    <div class="im_sidepanel_empty_wrap" ng-show="state.empty" ng-switch="state.mayBeHasMore">
+                                      <div ng-switch-when="true" class="im_history_loading" my-vertical-position="0.3" padding="true">
+                                        <div my-arc-progress stroke="4" width="32"></div>
+                                      </div>
+                                      <div ng-switch-default class="im_sidepanel_empty" my-vertical-position="0.25" padding="true" my-i18n="im_no_messages"></div>
+                                    </div>
+                  -->
+
+                  <div class="im_sidepanel_messages" ng-class="{im_sidepanel_messages_group: historyPeer.id < 0}"></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
     </div>
 
   </div>

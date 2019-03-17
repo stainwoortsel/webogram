@@ -173,7 +173,7 @@ input[type="number"] {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #6490b1;
+  background-color: #83D3D3;
   border-radius: 3px;
 
   &:hover,
@@ -199,13 +199,13 @@ input[type="number"] {
 }
 
 .btn-link {
-  color: #3a6d99;
+  color: #83D3D3;
   text-decoration: none !important;
   border-radius: 3px;
   overflow: hidden;
 
   &:hover {
-    background: #f2f6fa;
+    background: #a0f3f3;
   }
 
   &.btn-link-noarea:hover,
@@ -235,7 +235,7 @@ input[type="number"] {
   }
 
   &:hover {
-    background: #f2f6fa;
+    background: #f5fdfd;
   }
 }
 
@@ -243,7 +243,7 @@ input[type="number"] {
   &,
   &:focus,
   &:hover {
-    color: #4680b3;
+    color: #83D3D3;
   }
 }
 
@@ -354,7 +354,7 @@ input[type="number"] {
 .md_modal {
   &_head {
     color: #fff;
-    background: #5580a3;
+    background: #83D3D3;
     padding: 0 0 28px 26px;
   }
 
@@ -757,7 +757,7 @@ a.tg_checkbox, p.tg_checkbox {
   span.icon-checkbox-outer {
     float: right;
     display: inline-block;
-    background-color: #e6e6e6;
+    background-color: #f5fdfd;
     width: 36px;
     height: 14px;
     line-height: 14px;
@@ -769,7 +769,7 @@ a.tg_checkbox, p.tg_checkbox {
   }
 
   &.tg_checkbox_on span.icon-checkbox-outer {
-    background-color: #bfd9ed;
+    background-color: #a0f3f3;
   }
 
   i.icon-checkbox-inner {
@@ -784,13 +784,13 @@ a.tg_checkbox, p.tg_checkbox {
     margin-top: -3px;
     -webkit-transition: all ease 0.1s;
     transition: all ease 0.1s;
-    border: 1px solid #E7E7E7;
+    border: 1px solid #D1D1D1;
 
     .box-shadow(0px 0px 1px rgba(0, 0, 0, 0.05));
   }
 
   &.tg_checkbox_on i.icon-checkbox-inner {
-    background: #6b9bc2;
+    background: #83D3D3;
     margin-left: 16px;
     border: 0;
 
@@ -857,16 +857,16 @@ i.icon-radio {
 }
 
 .tg_radio.tg_radio_on .icon-radio-outer {
-  border-color: #5c8db3;
+  border-color: #83D3D3;
 }
 .tg_radio.tg_radio_on i.icon-radio {
-  background-color: #6b9bc2;
+  background-color: #83D3D3;
 }
 a.tg_radio:hover i.icon-radio {
   background-color: #f2f2f2;
 }
 a.tg_radio_on:hover i.icon-radio {
-  background-color: #5785aa;
+  background-color: #a0f3f3;
 }
 
 .tg_radio_label {
@@ -885,20 +885,20 @@ a.tg_radio_on:hover i.icon-radio {
 }
 .tg_slider_track {
   position: absolute;
-  background: #c4daec;
+  background: #f5fdfd;
   height: 4px;
   margin: 7px 0;
   width: 100%;
   z-index: 2;
 }
 .tg_slider_track_fill {
-  background: #83afd2;
+  background: #a0f3f3;
   height: 4px;
 }
 .tg_slider_thumb {
   position: absolute;
   border: 0;
-  background: #6b9bc2;
+  background: #83D3D3;
   width: 18px;
   height: 18px;
   border-radius: 9px;
@@ -948,7 +948,7 @@ a.tg_radio_on:hover i.icon-radio {
 
 /* Login page */
 .login_head_bg {
-  background: #5682a3;
+  background: #83D3D3;
   height: 226px;
 }
 .login_page {
@@ -976,12 +976,40 @@ a.tg_radio_on:hover i.icon-radio {
   .image-2x('../img/icons/General.png', 40px, 948px);
   background-position: -5px -10px;
 }
+
+.head_logo {
+  color: #fff;
+  padding: 17px 20px 15px 22px;
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  vertical-align: top;
+}
+
+.ps_head_btns_wrap {
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.ps_head_btn {
+  display: inline-block;
+  font-weight: bold;
+  padding: 16px 19px;
+  color: #1d1d1d;
+  font-size: 13px;
+  line-height: 16px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.icon-ps-title,
 .icon-tg-title {
-  width: 62px;
+  width: 135px;
   height: 14px;
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/Telegram.svg');
+  background-image: url('../img/logo.svg');
   background-repeat: no-repeat;
   background-position: 0 0;
   margin-top: 1px;
@@ -1484,14 +1512,17 @@ a.im_dialog_selected {
   color: #808080;
   margin-bottom: 18px;
 }
+.im_sidepanel_scrollable_wrap,
 .im_history_scrollable_wrap {
   outline: none ! important;
   position: relative;
 }
 
+.im_sidepanel_to_bottom,
 .im_history_to_bottom {
   overflow: hidden;
 
+  .im_sidepanel_scrollable,
   .im_history_scrollable {
     position: absolute;
     bottom: 0;
@@ -1540,6 +1571,12 @@ a.im_dialog_selected {
   padding: 0;
   position: relative;
 }
+
+.im_sidepanel {
+  // padding: 20px 0 0 0;
+  padding: 0;
+  position: relative;
+}
 .im_message_unread_split {
   background: #f0f4f7;
   color: #8096a8;
@@ -1550,7 +1587,7 @@ a.im_dialog_selected {
 
 .im_message_author,
 .im_message_fwd_author {
-  color: #3a6d99;
+  color: #1d1d1d;
   font-weight: bold;
 }
 .im_message_author_via,
@@ -1568,7 +1605,7 @@ a.im_dialog_selected {
   font-size: 12px;
 }
 .im_message_author_via {
-  color: #3a6d99;
+  color: #1d1d1d;
   margin-left: 5px;
 }
 .im_message_fwd_via {
@@ -1882,7 +1919,7 @@ div.im_message_video_thumb {
 
 .im_message_selected .icon-document,
 .im_history_select_active .im_message_outer_wrap:hover .icon-document {
-  background-color: #dae6f0;
+  background-color: #f5fdfd;
   background-position: -2px -542px;
 }
 
@@ -2423,10 +2460,10 @@ a.im_message_fwd_photo {
   padding: 0 4px;
 }
 .reply_markup_button {
-  color: #3a6d99;
+  color: #ffffff;
   display: block;
   width: 100%;
-  background: #f0f4f7;
+  background: #83D3D3;
   height: 30px;
   font-size: 13px;
   margin: 0;
@@ -2449,8 +2486,8 @@ a.im_message_fwd_photo {
 }
 .reply_markup_button:focus,
 .reply_markup_button:hover {
-  color: #3a6d99;
-  background: #dfe8f0;
+  color: #1d1d1d;
+  background: #f0f0f0;
 }
 .reply_markup_button_w1 {width: 100%;}
 .reply_markup_button_w2 {width: 50%;}
@@ -2465,15 +2502,17 @@ a.im_message_fwd_photo {
 .reply_markup_button_w11 {width: 9.09090909%;}
 .reply_markup_button_w12 {width: 8.33333333%;}
 
-
+.im_sidepanel_not_selected_wrap,
 .im_history_not_selected_wrap {
   display: none;
   .im_page_peer_not_selected & {
     display: block;
   }
 }
+.im_sidepanel_selected_wrap,
 .im_history_selected_wrap {
   display: none;
+  .im_sidepanel_loaded &,
   .im_history_loaded & {
     display: block;
   }
@@ -2481,8 +2520,10 @@ a.im_message_fwd_photo {
     display: none;
   }
 }
+.im_sidepanel_selected_loading_wrap,
 .im_history_selected_loading_wrap {
   display: block;
+  .im_sidepanel_loaded &,
   .im_history_loaded & {
     display: none;
   }
@@ -2491,6 +2532,8 @@ a.im_message_fwd_photo {
   }
 }
 
+.im_sidepanel_not_selected,
+.im_sidepanel_empty,
 .im_history_not_selected,
 .im_history_empty {
   visibility: hidden;
@@ -2505,10 +2548,12 @@ a.im_message_fwd_photo {
     visibility: visible;
   }
 
+  .im_sidepanel_to_bottom &,
   .im_history_to_bottom & {
     display: none;
   }
 }
+.im_sidepanel_loading,
 .im_history_loading {
   width: 35px;
   margin: 0 auto;
@@ -2518,7 +2563,7 @@ a.im_message_fwd_photo {
     visibility: visible;
   }
 }
-
+.im_sidepanel_loading_more,
 .im_history_loading_more {
   display: block;
   width: 26px;
@@ -2531,6 +2576,7 @@ a.im_message_fwd_photo {
     display: none;
   }
 
+  &.im_sidepanel_loading_more_active,
   &.im_history_loading_more_active {
     visibility: visible;
 
@@ -2539,6 +2585,7 @@ a.im_message_fwd_photo {
     }
   }
 }
+.im_sidepanel_loading_less,
 .im_history_loading_less {
   display: block;
   width: 26px;
@@ -2549,6 +2596,7 @@ a.im_message_fwd_photo {
     display: none;
   }
 
+  &.im_sidepanel_loading_less_active,
   &.im_history_loading_less_active {
     visibility: visible;
 
@@ -4491,7 +4539,7 @@ a.countries_modal_search_clear {
 }
 
 .telegram_modal_logo {
-  .image-2x('../img/Telegram72.png', 72px, 72px);
+  .image-2x('../img/WalterGropius72.png', 72px, 72px);
   background-position: 0 0;
 }
 
@@ -4549,6 +4597,11 @@ a.countries_modal_search_clear {
 
   &_more_link {
     font-size: 13px;
+    color: #1d1d1d;
+    &:hover,
+    &:visited {
+      color: #1d1d1d;
+    }
   }
 }
 
@@ -4984,6 +5037,11 @@ a.countries_modal_search_clear {
   margin-top: 15px;
 }
 
+.im_sidepanel_wrap {
+  &:first-child {
+    border-bottom: 1px solid #d1d1d1;
+  }
+}
 
 @media print {
   html, body {
@@ -5002,6 +5060,9 @@ a.countries_modal_search_clear {
   body .tg_head_peer_dropdown {
     display: none;
   }
+  body .im_sidepanel_wrap {
+    height: auto !important;
+  }
   body .im_history_wrap {
     height: auto !important;
   }
@@ -5014,6 +5075,7 @@ a.countries_modal_search_clear {
   body .tg_head_peer_info {
     text-align: center;
   }
+  body .im_sidepabel_col_wrap,
   body .im_history_col_wrap,
   body .tg_head_main_wrap {
     width: auto;
